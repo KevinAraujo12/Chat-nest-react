@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
 import '../styles/Chat.css';
 
-const socket = io();
+const socket = io(process.env.REACT_APP_BACKEND_URL);
 
 const Chat = () => {
   const [username, setUsername] = useState('');
